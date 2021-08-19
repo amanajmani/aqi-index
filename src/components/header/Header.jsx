@@ -24,11 +24,11 @@ const Header = ({
         onChange={handleFilterCity}
         value={filterByCity}
       >
-        <option selected value="all">
-          Select your city
-        </option>
+        <option defaultValue="all">Select your city</option>
         {tableData.map((table) => (
-          <option value={table.city}>{table.city}</option>
+          <option key={table.city} value={table.city}>
+            {table.city}
+          </option>
         ))}
       </select>
     </div>
