@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+};
+
+.header select {}
+
+.header .select {
+  width: 50%;
+  height: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+}

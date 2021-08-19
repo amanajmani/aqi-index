@@ -1,0 +1,61 @@
+.map {
+  height: 470px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 16px;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container {
+  height: 100%;
+  border-radius: 12px;
+}
+
+.city__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+.info__container {
+  width: 150px;
+}
+
+.city__aqi {
+  font-size: 15px;
+  color: var(--secondary-text-color);
+}
+
+.map .leaflet-div-icon {
+  border: none;
+  background: none;
+}
+
+.good__icon  {
+  color: var(--good-color);
+}
+
+.satisfactory__icon {
+  color: var(--satisfactory-color);
+}
+
+.moderate__icon {
+  color: var(--moderate-color);
+}
+
+.poor__icon {
+  color: var(--poor-color);
+}
+
+.very_poor__icon {
+  color: var(--very_poor-color);
+}
+
+.severe__icon {
+  color: var(--severe-color);
+}
+
+.all__icon {
+  color: var(--all-color);
+}

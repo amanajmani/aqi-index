@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.left__container {
+  flex: 3;
+  margin-right: 40px;
+}
+
+.right__container {
+  flex: 1;
+}
+
+.left__container .categories__container {
+  display: flex;
+  justify-content: space-around;
+}
