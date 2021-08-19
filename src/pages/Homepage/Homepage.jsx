@@ -37,6 +37,7 @@ const Homepage = ({
         <div className="categories__container">
           {Object.keys(CATEGORIES_TYPE).map((key) => (
             <CategoriesCard
+              key={key}
               category={key}
               icon={CATEGORIES_TYPE[key].icon}
               color={CATEGORIES_TYPE[key].hex}
@@ -70,11 +71,15 @@ export default Homepage;
 
 Homepage.propTypes = {
   mapData: PropTypes.instanceOf(Array).isRequired,
-  filterCategory: PropTypes.string.isRequired,
+  filterCategory: PropTypes.string,
   setFilterCategory: PropTypes.func.isRequired,
   tableData: PropTypes.instanceOf(Array).isRequired,
   filterByCity: PropTypes.string.isRequired,
   setFilterByCity: PropTypes.func.isRequired,
   mapCenter: PropTypes.instanceOf(Object).isRequired,
   mapZoom: PropTypes.number.isRequired,
+};
+
+Homepage.defaultProps = {
+  filterCategory: null,
 };

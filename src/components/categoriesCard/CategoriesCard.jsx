@@ -71,12 +71,16 @@ export default CategoriesCard;
 
 CategoriesCard.propTypes = {
   mapData: PropTypes.instanceOf(Array).isRequired,
-  filterCategory: PropTypes.string.isRequired,
   setFilterCategory: PropTypes.func.isRequired,
+  filterCategory: PropTypes.string,
   setFilterByCity: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
-  icon: PropTypes.instanceOf(Array).isRequired,
+  icon: PropTypes.instanceOf(Object).isRequired,
   color: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
   hoverColor: PropTypes.string.isRequired,
+};
+
+CategoriesCard.defaultProps = {
+  filterCategory: null,
 };
