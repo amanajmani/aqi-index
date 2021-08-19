@@ -12,12 +12,15 @@ import CATEGORIES_TYPE from "../../constants/categoriesType.constants";
 import MAP_ATTRIBUTION_URL from "./constants/mapAttributionURL.constants";
 import MAP_TILE_LAYER_URL from "./constants/mapTileLayerURL.constants";
 
+/* UTILS */
+import isArrayEmpty from "../../utils/isArrayEmpty.utils";
+
 /* STYLES */
 import "./map.css";
 
 const showDataOnMap = (data, filterCategory, filterByCity) => {
   const filteredData =
-    data.length !== 0 && data.filter((e) => e.category && e.coordinates);
+    isArrayEmpty(data) && data.filter((e) => e.category && e.coordinates);
 
   const iconMarkup = (icon, category) =>
     renderToStaticMarkup(
@@ -44,15 +47,12 @@ const showDataOnMap = (data, filterCategory, filterByCity) => {
   };
 
   return (
-    filteredData &&
-    filteredData.length !== 0 &&
+    isArrayEmpty(filteredData) &&
     filterCitiesData(filteredData).map((e) => (
       <Marker
+        key={e.city}
         data="customdata"
-        position={[
-          e.coordinates && e.coordinates.lat,
-          e.coordinates && e.coordinates.lng,
-        ]}
+        position={[e.coordinates?.lat, e.coordinates?.lng]}
         icon={customMarkerIcon(CATEGORIES_TYPE[e.category].icon, e.category)}
       >
         <Popup>
@@ -88,8 +88,12 @@ export default Map;
 
 Map.propTypes = {
   mapData: PropTypes.instanceOf(Array).isRequired,
-  filterCategory: PropTypes.string.isRequired,
+  filterCategory: PropTypes.string,
   filterByCity: PropTypes.string.isRequired,
   center: PropTypes.instanceOf(Object).isRequired,
   zoom: PropTypes.number.isRequired,
+};
+
+Map.defaultProps = {
+  filterCategory: null,
 };
