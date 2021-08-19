@@ -21,8 +21,8 @@ const Table = ({ tableData }) => {
       <div className="table">
         {tableData.map((cityObj) => (
           <tr className="table__row">
-            <td>{cityObj.city}</td>
-            <td>
+            <td className="table__data">{cityObj.city}</td>
+            <td className="table__data">
               {cityObj.aqi}
               {cityObj.trend && (
                 <FontAwesomeIcon

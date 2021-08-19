@@ -10,7 +10,7 @@
 
 .table tr:nth-of-type(odd) {}
 
-.table .table__row td {
+.table .table__row .table__data {
   padding: 2rem;
 }
 
