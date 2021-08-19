@@ -20,9 +20,9 @@ const Table = ({ tableData }) => {
 
       <div className="table">
         {tableData.map((cityObj) => (
-          <tr className="table__row">
-            <td className="table__data">{cityObj.city}</td>
-            <td className="table__data">
+          <div className="table__row">
+            <span className="table__data">{cityObj.city}</span>
+            <span className="table__data">
               {cityObj.aqi}
               {cityObj.trend && (
                 <FontAwesomeIcon
@@ -30,8 +30,8 @@ const Table = ({ tableData }) => {
                   style={{ color: AQI_TREND[cityObj.trend].color }}
                 />
               )}
-            </td>
-          </tr>
+            </span>
+          </div>
         ))}
       </div>
     </div>
