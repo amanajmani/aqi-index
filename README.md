@@ -34,6 +34,10 @@ npm i
 ```bash
 npm run start
 ```
+
+### Live Link
+- [AQI Tracker](https://aqi-tracker-proximity.netlify.app/)
+
 ### Tech Stack
 - [React](https://reactjs.org/)
 - [Font Awesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
