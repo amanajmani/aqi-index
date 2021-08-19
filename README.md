@@ -39,8 +39,6 @@ npm run start
 - [Font Awesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 - [Leaflet](https://react-leaflet.js.org/)
 - [Prop Types](https://www.npmjs.com/package/prop-types)
-- [Redux](https://redux.js.org/)
-- [Google Auth](https://developers.google.com/identity/protocols/oauth2)
 
 #### External API's
 - Websocket - (For Live Data)
