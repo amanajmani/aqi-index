@@ -6,9 +6,7 @@
   height: 88vh;
   overflow-y: scroll;
   margin-top: 20px;
-};
-
-.table tr:nth-of-type(odd) {}
+}
 
 .table .table__row .table__data {
   padding: 2rem;
@@ -20,7 +18,7 @@
   justify-content: space-between;
 }
 
-.table div.table__row:nth-of-type(odd) {
+.table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
 }
 
