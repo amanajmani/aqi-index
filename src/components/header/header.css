@@ -8,9 +8,7 @@
   font-size: 30px;
 };
 
-.header select {}
-
-.header .select {
+.header .dropdown {
   width: 50%;
   height: 40px;
   border-radius: 6px;

@@ -10,12 +10,11 @@
 
 .table tr:nth-of-type(odd) {}
 
-.table td {
+.table .table__row td {
   padding: 2rem;
 }
 
-.table tr {
-  /* background: red; */
+.table .table__row {
   width: 100%;
   display: flex;
   justify-content: space-between;

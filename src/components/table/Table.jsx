@@ -20,7 +20,7 @@ const Table = ({ tableData }) => {
 
       <div className="table">
         {tableData.map((cityObj) => (
-          <tr>
+          <tr className="table__row">
             <td>{cityObj.city}</td>
             <td>
               {cityObj.aqi}

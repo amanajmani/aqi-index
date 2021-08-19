@@ -20,7 +20,7 @@ const Header = ({
     <div className="header">
       <span>AQI Tracker</span>
       <select
-        className="select"
+        className="dropdown"
         onChange={handleFilterCity}
         value={filterByCity}
       >
